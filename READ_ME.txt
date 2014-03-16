@@ -1,0 +1,1 @@
+This is a bengali alphabet learning project for kids.
