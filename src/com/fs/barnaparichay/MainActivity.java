@@ -3,6 +3,7 @@ package com.fs.barnaparichay;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -71,8 +72,20 @@ public class MainActivity extends Activity implements
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 		// TODO Auto-generated method stub
-		textToSpeech = Util.getTTSText(position);
-		speakOut();
+		/*textToSpeech = Util.getTTSText(position);
+		speakOut();*/
+		MediaPlayer mPlayer;
+		switch (position) {
+		case 0:
+			mPlayer = MediaPlayer.create(this, R.raw.01);
+			break;
+
+		default:
+			break;
+		}
+		
+        mPlayer.start();
+
 	}
 
 }
